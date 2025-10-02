@@ -1,1 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>USIU First-Year Companion (v1)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>USIU First-Year Companion</h1>
+  </header>
 
+  <main>
+    <section aria-labelledby="welcome-heading">
+      <h2 id="greeting">Hello!</h2>
+      <p id="intro">Welcome to your quick orientation helper.</p>
+
+      <div class="controls">
+        <button id="run" type="button">Run Estimator</button>
+        <button id="theme" type="button">Toggle Theme</button>
+        <button id="reset" type="button">Reset Summary</button>
+      </div>
+    </section>
+
+    <section>
+      <h3>Weekly Summary</h3>
+      <pre id="summary">Run the estimator to see your weekly plan…</pre>
+    </section>
+  </main>
+
+  <footer>
+    <small>© USIU Student Affairs (Demo v1)</small>
+  </footer>
+
+  <!-- external JS: core logic lives in public/script.js -->
+  <script src="script.js"></script>
+
+  <!-- tiny internal script to show internal+external wiring (final uses external functions) -->
+  <script>
+    document.getElementById("run").addEventListener("click", runEstimator);
+    document.getElementById("theme").addEventListener("click", toggleTheme);
+    document.getElementById("reset").addEventListener("click", resetSummary);
+  </script>
+</body>
+</html>
